@@ -22,7 +22,7 @@
 		<sonar.dynamicAnalysis>reuseReports</sonar.dynamicAnalysis>
 		<sonar.jacoco.reportPath>${project.basedir}/target/jacoco.exec</sonar.jacoco.reportPath>
         <sonar.coverage.jacoco.xmlReportPaths>
-            target/site/jacoco/jacoco.xml
+            target/jacoco/jacoco.xml
         </sonar.coverage.jacoco.xmlReportPaths>
 	</properties>
 
@@ -66,11 +66,11 @@
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
 			</plugin>
-			<plugin>
-				<groupId>org.jacoco</groupId>
-				<artifactId>jacoco-maven-plugin</artifactId>
-				<version>0.8.8</version>
-				<executions>
+            <plugin>
+                <groupId>org.jacoco</groupId>
+                <artifactId>jacoco-maven-plugin</artifactId>
+                <version>0.8.8</version>
+                <executions>
                     <execution>
                         <goals>
                             <goal>prepare-agent</goal>
@@ -78,13 +78,13 @@
                     </execution>
                     <execution>
                         <id>report</id>
-                        <phase>verify</phase>
+                        <phase>test</phase>
                         <goals>
                             <goal>report</goal>
                         </goals>
                     </execution>
-				</executions>
-			</plugin>
+                </executions>
+            </plugin>
 		</plugins>
 	</build>
 
