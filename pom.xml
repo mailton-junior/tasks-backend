@@ -22,7 +22,7 @@
 		<sonar.dynamicAnalysis>reuseReports</sonar.dynamicAnalysis>
 		<sonar.jacoco.reportPath>${project.basedir}/target/jacoco.exec</sonar.jacoco.reportPath>
         <sonar.coverage.jacoco.xmlReportPaths>
-            target/jacoco/jacoco.xml
+            target/site/jacoco/jacoco.xml
         </sonar.coverage.jacoco.xmlReportPaths>
 	</properties>
 
